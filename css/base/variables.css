@@ -1,0 +1,25 @@
+:root {
+    /* Colores base */
+    --primary: #2563eb;
+    --primary-hover: #1e4fcc;
+    --secondary: #3b82f6;
+    --dark: #1e293b;
+    --light: #f8fafc;
+    --text-dark: #1e293b;
+    --text-light: #f8fafc;
+    
+    /* Colores adicionales */
+    --success: #22c55e;
+    --warning: #eab308;
+    --danger: #ef4444;
+    --background-dark: #0f172a;
+    --background-light: #ffffff;
+    
+    /* Espaciado */
+    --radius: 0.5rem;
+    --shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    
+    /* Gradientes */
+    --gradient-primary: linear-gradient(135deg, var(--primary), var(--secondary));
+}

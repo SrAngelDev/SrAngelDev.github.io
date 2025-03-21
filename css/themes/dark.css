@@ -1,0 +1,44 @@
+[data-theme="dark"] {
+    --background-light: #1e293b;
+    --background-dark: #0f172a;
+    --text-dark: #f8fafc;
+    --text-light: #1e293b;
+    --shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+[data-theme="dark"] body {
+    background: var(--background-dark);
+    color: var(--text-dark);
+}
+
+[data-theme="dark"] .navbar {
+    background: rgba(30, 41, 59, 0.95);
+}
+
+[data-theme="dark"] .brand-text {
+    color: var(--text-dark);
+}
+
+[data-theme="dark"] .navbar__link {
+    color: var(--text-dark);
+}
+
+[data-theme="dark"] .card {
+    background: var(--background-light);
+}
+
+[data-theme="dark"] .tech-item {
+    background: rgba(96, 165, 250, 0.05);
+}
+
+[data-theme="dark"] .project-card {
+    background: var(--background-light);
+}
+
+[data-theme="dark"] .skill-bar {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+[data-theme="dark"] .contact-info {
+    background: rgba(96, 165, 250, 0.05);
+}

@@ -1,0 +1,36 @@
+.card {
+    background: var(--background-light);
+    border-radius: var(--radius);
+    padding: 2rem;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+}
+
+.card--highlight {
+    border-top: 4px solid var(--primary);
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.tech-list {
+    list-style: none;
+    display: grid;
+    gap: 1.5rem;
+}
+
+.tech-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    border-radius: var(--radius);
+    background: rgba(37, 99, 235, 0.05);
+}
+
+.tech-item i {
+    font-size: 1.5rem;
+    color: var(--primary);
+}

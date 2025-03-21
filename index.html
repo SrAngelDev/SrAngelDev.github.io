@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth" data-theme="light">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Portfolio completo de Ángel Sánchez - Desarrollador Full Stack">
+        <meta name="keywords" content="Desarrollador Full Stack, FiveM, Kotlin, Clean Code, Desarrollo Web">
+        <meta property="og:title" content="Ángel Sánchez | Portfolio Profesional">
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="https://tuportfolio.com">
+        <meta property="og:image" content="assets/og-image.jpg">
+        
+        <title>Ángel Sánchez | Full Stack Developer</title>
+        
+        <!-- Preconexiones y recursos externos -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;700&family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        
+        <!-- Hojas de estilo -->
+        <link rel="stylesheet" href="css/main.css">
+        
+        <!-- Scripts -->
+        <script src="js/theme-switcher.js" defer></script>
+        <script src="js/intersection-observer.js" defer></script>
+        <script src="js/form-validation.js" defer></script>
+        <script src="js/mobile-menu.js" defer></script>
+        <script src="js/screen-loader.js" defer></script>
+        <script type="module" src="js/main.js" defer></script>
+    </head>
+
+    <body>
+        <!-- Pantalla de carga para la primera visita -->
+        <div id="loader" class="loader">
+            <div class="neon-title">
+                <span>Ángel</span>
+                <span class="highlight">está Hacekando</span>
+                <span>Tu Confianza</span>
+            </div>
+            <div class="hacker-icon">
+                <i class="fas fa-user-secret"></i>
+            </div>
+            <p class="loader-text">Espera mientras Ángel comprueba que eres de fiar...</p>
+            <div class="code-terminal">
+                <p class="code-line">> Accediendo al sistema...</p>
+                <p class="code-line">> Descifrando protocolos...</p>
+                <p class="code-line">> Verificando confianza...</p>
+                <p class="code-line success">> 🟢 Autenticado</p>
+            </div>
+            <canvas id="particles-background"></canvas>
+        </div> 
+
+        <div id="main-content" class="content" style="display: none;">
+            <nav class="navbar" aria-label="Navegación principal">
+                <div class="navbar__container">
+                    <a href="#hero" class="navbar__brand">
+                        <img src="assets/logo.png" alt="Logo Ángel Sánchez" width="48" height="48" class="logo-img">
+                        <span class="brand-text">Ángel Sánchez Gasanz</span>
+                    </a>
+            
+                    <!-- Menú desktop -->
+                    <ul class="navbar__menu navbar__menu--desktop" role="list">
+                        <li class="navbar__item">
+                            <a href="#about" class="navbar__link" data-scroll>Perfil</a>
+                        </li>
+                        <li class="navbar__item">
+                            <a href="#expertise" class="navbar__link" data-scroll>Tecnologías</a>
+                        </li>
+                        <li class="navbar__item">
+                            <a href="#projects" class="navbar__link" data-scroll>Proyectos</a>
+                        </li>
+                        <li class="navbar__item">
+                            <a href="#stats" class="navbar__link" data-scroll>Estadísticas</a>
+                        </li>
+                        <li class="navbar__item">
+                            <a href="#contact" class="navbar__link" data-scroll>Contacto</a>
+                        </li>
+                    </ul>
+            
+                    <div class="navbar__actions">
+                        <button class="theme-toggle" aria-label="Cambiar tema">
+                            <span class="theme-icon--light"><i class="fas fa-sun"></i></span>
+                            <span class="theme-icon--dark"><i class="fas fa-moon"></i></span>
+                        </button>
+                        <button class="navbar__hamburger" aria-label="Abrir menú">
+                            <span class="hamburger__bar"></span>
+                            <span class="hamburger__bar"></span>
+                            <span class="hamburger__bar"></span>
+                        </button>
+                    </div>
+                </div>
+            
+                <!-- Menú móvil -->
+                <div class="navbar__menu--mobile">
+                    <!-- Menú móvil (dropdown) -->
+                    <div class="navbar__menu--mobile">
+                        <ul class="mobile-menu__list" role="list">
+                            <li class="mobile-menu__item">
+                                <a href="#about" class="mobile-menu__link" data-scroll>Perfil</a>
+                            </li>
+                            <li class="mobile-menu__item">
+                                <a href="#expertise" class="mobile-menu__link" data-scroll>Tecnologías</a>
+                            </li>
+                            <li class="mobile-menu__item">
+                                <a href="#projects" class="mobile-menu__link" data-scroll>Proyectos</a>
+                            </li>
+                            <li class="mobile-menu__item">
+                                <a href="#stats" class="mobile-menu__link" data-scroll>Estadísticas</a>
+                            </li>
+                            <li class="mobile-menu__item">
+                                <a href="#contact" class="mobile-menu__link" data-scroll>Contacto</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <!-- Sección Hero -->
+            <header id="hero" class="hero" role="banner" aria-label="Hero Section">
+                <div class="hero__content">
+                    <div class="hero__text">
+                        <h1 class="hero__title" data-aos="fade-up">
+                            <span class="subtitle">👋 Hola, soy Ángel Sánchez Gasanz</span>
+                        </h1>
+
+                        <p class="hero__description" data-aos="fade-up" data-aos-delay="150">
+                            Estudiante de 1º de Desarrollo de Aplicaciones Web (DAW) en formación para convertirme en Full Stack Developer.
+                        </p>
+                        
+                        <div class="hero__meta">
+                            <div class="badge-group">
+                                <span class="badge">
+                                    <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
+                                    <span class="sr-only"></span> Madrid, ES
+                                </span>
+                                <span class="badge">
+                                    <i class="fas fa-code-branch" aria-hidden="true"></i>
+                                    <span class="sr-only"></span> Disponible para proyectos
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="hero__actions">
+                        <a href="#projects" class="btn btn--primary" data-aos="zoom-in">
+                            <i class="fas fa-rocket" aria-hidden="true"></i>
+                            Ver Proyectos
+                        </a>
+                        <a href="#contact" class="btn btn--outline" data-aos="zoom-in" data-aos-delay="150">
+                            <i class="fas fa-paper-plane" aria-hidden="true"></i>
+                            Contactar
+                        </a>
+                    </div>
+
+                    <div class="hero__social">
+                        <a href="https://github.com/SrAngelDev" target="_blank" rel="noopener noreferrer" class="social-link">
+                            <i class="fab fa-github" aria-hidden="true"></i>
+                            <span class="sr-only">GitHub</span>
+                        </a>
+                        <a href="mailto:srangeldev@gmail.com" class="social-link">
+                            <i class="fas fa-envelope" aria-hidden="true"></i>
+                            <span class="sr-only">Email</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Efecto de ondas -->
+                <div class="hero__waves" aria-hidden="true">
+                    <div class="wave wave1"></div>
+                    <div class="wave wave2"></div>
+                </div>
+            </header>
+            <!-- Sección Perfil Técnico -->
+            <section id="about" class="section section--profile">
+                <div class="container">
+                    <h2 class="section__title" data-aos="fade-up">Perfil Técnico</h2>
+                    
+                    <div class="grid-layout">
+                        <!-- Enfoque Actual -->
+                        <article class="card card--highlight" data-aos="fade-right">
+                            <h3 class="card__title">Enfoque Actual</h3>
+                            <div class="card__body">
+                                <ul class="tech-list">
+                                    <li class="tech-item">
+                                        <i class="fas fa-cube"></i>
+                                        <div class="tech-content">
+                                            <h4>Arquitecturas MVC</h4>
+                                            <p>Implementación de patrones arquitectónicos escalables</p>
+                                        </div>
+                                    </li>
+                                    <li class="tech-item">
+                                        <i class="fas fa-broom"></i>
+                                        <div class="tech-content">
+                                            <h4>Clean Code</h4>
+                                            <p>Desarrollo siguiendo mejores prácticas de código limpio</p>
+                                        </div>
+                                    </li>
+                                    <li class="tech-item">
+                                        <i class="fas fa-shield-alt"></i>
+                                        <div class="tech-content">
+                                            <h4>Principios SOLID</h4>
+                                            <p>Aplicación de fundamentos de diseño orientado a objetos</p>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </article>
+
+                        <!-- Valor Diferencial -->
+                        <article class="card card--highlight" data-aos="fade-left">
+                            <h3 class="card__title">Valor Diferencial</h3>
+                            <div class="card__body">
+                                <ul class="tech-list">
+                                    <li class="tech-item">
+                                        <i class="fas fa-chart-line"></i>
+                                        <div class="tech-content">
+                                            <h4>Innovación</h4>
+                                            <p>Adopción de tecnologías emergentes para resolver problemas complejos</p>
+                                        </div>
+                                    </li>
+                                    <li class="tech-item">
+                                        <i class="fas fa-users"></i>
+                                        <div class="tech-content">
+                                            <h4>Colaboración</h4>
+                                            <p>Trabajo en equipo eficaz para alcanzar metas comunes</p>
+                                        </div>
+                                    </li>
+                                    <li class="tech-item">
+                                        <i class="fas fa-tachometer-alt"></i>
+                                        <div class="tech-content">
+                                            <h4>Eficiencia</h4>
+                                            <p>Optimización de procesos para maximizar resultados</p>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </article>
+
+                        <!-- Roadmap -->
+                        <article class="card card--highlight" data-aos="fade-up">
+                            <h3 class="card__title">Roadmap</h3>
+                            <div class="card__body">
+                                <ul class="tech-list">
+                                    <li class="tech-item">
+                                        <i class="fas fa-rocket"></i>
+                                        <div class="tech-content">
+                                            <h4>Expansión</h4>
+                                            <p>Explorar nuevas tecnologías y tendencias del mercado</p>
+                                        </div>
+                                    </li>
+                                    <li class="tech-item">
+                                        <i class="fas fa-code"></i>
+                                        <div class="tech-content">
+                                            <h4>Automatización</h4>
+                                            <p>Integrar herramientas automatizadas para aumentar la productividad</p>
+                                        </div>
+                                    </li>
+                                    <li class="tech-item">
+                                        <i class="fas fa-graduation-cap"></i>
+                                        <div class="tech-content">
+                                            <h4>Capacitación</h4>
+                                            <p>Fomentar el aprendizaje continuo para mejorar habilidades</p>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </article>
+
+                    </div>
+                </div>
+            </section>
+
+            <!-- Sección Tecnologías -->
+            <section id="expertise" class="section section--dark">
+                <div class="container">
+                    <!-- Título -->
+                    <h2 class="section__title" data-aos="fade-up">Stack Tecnológico</h2>
+                    
+                    <div class="expertise-grid">
+                        <!-- Lenguajes -->
+                        <div class="expertise-category" data-aos="zoom-in">
+                            <h3 class="expertise-title">
+                                <i class="fas fa-code"></i> Lenguajes
+                            </h3>
+                            <div class="skill-matrix">
+                                <!-- Habilidad -->
+                                <div class="skill-item">
+                                    <span class="skill-name">JavaScript</span>
+                                    <div class="skill-bar">
+                                        <div class="skill-progress" style="width: 80%;"></div>
+                                        <span class="skill-level">Intermedio</span>
+                                    </div>
+                                </div>
+                                <div class="skill-item">
+                                    <span class="skill-name">Kotlin</span>
+                                    <div class="skill-bar">
+                                        <div class="skill-progress" style="width: 70%;"></div>
+                                        <span class="skill-level">Intermedio</span>
+                                    </div>
+                                </div>
+                                <div class="skill-item">
+                                    <span class="skill-name">Lua</span>
+                                    <div class="skill-bar">
+                                        <div class="skill-progress" style="width: 95%;"></div>
+                                        <span class="skill-level">Experto</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- FiveM -->
+                        <div class="expertise-category" data-aos="zoom-in" data-aos-delay="150">
+                            <h3 class="expertise-title">
+                                <i class="fas fa-gamepad"></i> FiveM
+                            </h3>
+                            <div class="fivem-stack">
+                                <!-- Framework -->
+                                <div class="framework-card">
+                                    <div class="framework-header">
+                                        <i class="fab fa-lua"></i>
+                                        <h4>ESX/QBCore</h4>
+                                    </div>
+                                    <ul class="framework-features">
+                                        <li>Arquitectura Modular</li>
+                                        <li>Optimización de Scripts</li>
+                                        <li>Integración MySQL</li>
+                                    </ul>
+                                </div>
+                                <!-- Logro -->
+                                <div class="achievement-badge">
+                                    <div class="badge-content">
+                                        <span class="badge-number">500+</span>
+                                        <span class="badge-text">Usuarios Concurrentes</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Herramientas -->
+                        <div class="expertise-category" data-aos="zoom-in" data-aos-delay="300">
+                            <h3 class="expertise-title">
+                                <i class="fas fa-tools"></i> Herramientas
+                            </h3>
+                            <div class="tools-grid">
+                                <div class="tool-item">
+                                    <i class="fab fa-intellij"></i> <span>IntelliJ IDEA</span>
+                                </div>
+                                <div class="tool-item">
+                                    <i class="fab fa-vscode"></i> <span>VS Code</span>
+                                </div>
+                                <div class="tool-item">
+                                    <i class="fab fa-git-alt"></i> <span>Git</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+            <!-- Sección Proyectos -->
+            <section id="projects" class="section">
+                <div class="container">
+                    <h2 class="section__title" data-aos="fade-up">Proyectos Destacados</h2>
+                    
+                    <div class="projects-grid">
+                        <!-- Proyecto FiveM -->
+                        <article class="project-card" data-aos="fade-up">
+                            <div class="project-header">
+                                <h3 class="project-title">Sistema de Gestión FiveM</h3>
+                                <span class="project-year">2018-2023</span>
+                            </div>
+                            <div class="project-content">
+                                <p class="project-description">Plataforma de gestión de servidores de rol con 500+ usuarios concurrentes</p>
+                                <ul class="project-features">
+                                    <li><i class="fas fa-check"></i> Optimización del 100% de scripts</li>
+                                    <li><i class="fas fa-network-wired"></i> Arquitectura modular multinivel</li>
+                                    <li><i class="fas fa-tachometer-alt"></i> +40% rendimiento</li>
+                                </ul>
+                                <div class="project-tech">
+                                    <span class="tech-tag"><i class="fab fa-lua"></i> Lua</span>
+                                    <span class="tech-tag"><i class="fas fa-database"></i> MySQL</span>
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- Proyecto Kotlin -->
+                        <article class="project-card" data-aos="fade-up" data-aos-delay="150">
+                            <div class="project-header">
+                                <h3 class="project-title">Sistema de Tareas Kotlin</h3>
+                                <span class="project-year">2023</span>
+                            </div>
+                            <div class="project-content">
+                                <p class="project-description">Aplicación de gestión de tareas con arquitectura moderna</p>
+                                <ul class="project-features">
+                                    <li><i class="fas fa-check"></i> Clean Architecture</li>
+                                    <li><i class="fas fa-bolt"></i> Coroutines & Flows</li>
+                                    <li><i class="fas fa-vial"></i> Pruebas unitarias</li>
+                                </ul>
+                                <div class="project-tech">
+                                    <span class="tech-tag"><i class="fab fa-kotlin"></i> Kotlin</span>
+                                    <span class="tech-tag"><i class="fas fa-layer-group"></i> MVVM</span>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </section>
+            <!-- Sección Estadísticas -->
+            <section id="stats" class="section section--dark">
+                <div class="container">
+                    <h2 class="section__title" data-aos="fade-up">Estadísticas</h2>
+                    <div class="stats-grid">
+                        <div class="stats-card" data-aos="zoom-in" data-aos-delay="150">
+                            <img src="https://github-readme-stats.vercel.app/api?username=SrAngelDev&theme=react&show_icons=true&hide_border=true&count_private=true" class="github-stats" aria-hidden="true">
+                        </div>
+                        <div class="stats-card" data-aos="zoom-in" data-aos-delay="150">
+                            <img src="https://github-readme-streak-stats.herokuapp.com/?user=SrAngelDev&theme=react&hide_border=true" class="github-langs" aria-hidden="true">
+                        </div>
+                        <div class="stats-card" data-aos="zoom-in" data-aos-delay="150">
+                            <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=SrAngelDev&theme=react&show_icons=true&hide_border=true&layout=compact" class="github-langs" aria-hidden="true">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Sección Contacto -->
+            <section id="contact" class="section">
+                <div class="container">
+                    <h2 class="section__title" data-aos="fade-up">Contacto</h2>
+                    <div class="contact-grid">
+                        <div class="contact-info" data-aos="fade-right">
+                            <div class="contact-card">
+                                <h3><i class="fas fa-handshake"></i> Trabajemos juntos</h3>
+                                <p>Contáctame para:</p>
+                                <ul class="collaboration-list">
+                                    <li><i class="fas fa-code"></i> Desarrollo de proyectos</li>
+                                    <li><i class="fas fa-brain"></i> Colaboraciones técnicas</li>
+                                    <li><i class="fas fa-lightbulb"></i> Consultoría</li>
+                                </ul>
+                                <div class="contact-details">
+                                    <a href="mailto:srangeldev@gmail.com" class="contact-link">
+                                        <i class="fas fa-envelope"></i> srangeldev@gmail.com
+                                    </a>
+                                    <div class="social-links">
+                                        <a href="https://github.com/SrAngelDev" target="_blank" rel="noopener noreferrer">
+                                            <i class="fab fa-github"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <form class="contact-form" data-aos="fade-left">
+                            <div class="form-group">
+                                <label for="name">Nombre</label>
+                                <input type="text" id="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Mensaje</label>
+                                <textarea id="message" rows="5" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn--primary">
+                                <i class="fas fa-paper-plane"></i> Enviar Mensaje
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Footer -->
+            <footer class="footer">
+                <div class="container">
+                    <div class="footer-content">
+                        <div class="footer-quote">
+                            <blockquote>
+                                "Tus clientes más insatisfechos son tu mayor fuente de aprendizaje."
+                                <cite>- Bill Gates</cite>
+                            </blockquote>
+                        </div>
+                        <div class="footer-info">
+                            <p>&copy; 2025 Ángel Sánchez</p>
+                            <p>Desarrollado con <i class="fas fa-heart"></i> y <i class="fas fa-coffee"></i></p>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+        <script type="module" src="js/main.js"></script>
+    </body>
+</html>
