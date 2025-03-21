@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Portfolio-Personal
 
 Un portafolio personal diseñado para mostrar mis habilidades, proyectos y experiencia profesional como desarrollador. Este proyecto combina diseño moderno, tecnologías web avanzadas y un enfoque en la experiencia del usuario.
@@ -74,8 +73,3 @@ Si tienes alguna pregunta o te gustaría colaborar, no dudes en contactarme:
 Este proyecto está licenciado bajo la [MIT License](LICENSE). Siéntete libre de usarlo, modificarlo y adaptarlo.
 
 ---
-
-Espero que este `README.md` te ayude a destacar tu proyecto. Si necesitas personalizar algo más, avísame. 😊
-=======
-# SrAngelDev.github.io
->>>>>>> 8736618184f370158d386db6f52b217872b177c1
