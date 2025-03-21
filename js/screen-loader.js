@@ -14,10 +14,10 @@ export default function initScreenLoader() {
             loader.style.display = "none"; // Eliminamos completamente el loader
             mainContent.style.display = "block"; // Mostramos el contenido principal
             mainContent.classList.add("visible"); // Animación del contenido
-        }, 0); // Tiempo de transición sincronizado con CSS - remplazar 0 por 1500
+        }, 1500); // Tiempo de transición sincronizado con CSS - remplazar 0 por 1500
     }
 
     resizeCanvas();
 
-    setTimeout(hideLoader, 0); // remplazar 0 por 5000
+    setTimeout(hideLoader, 5000); // remplazar 0 por 5000
 }
