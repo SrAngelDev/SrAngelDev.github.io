@@ -68,12 +68,12 @@
 
 .social-links {
     margin-top: 1rem;
-    display: flex;
+    display: grid;
     gap: 1rem;
 }
 
 .social-links a {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     color: var(--primary);
     transition: color 0.3s ease;
 }

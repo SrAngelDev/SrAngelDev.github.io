@@ -42,3 +42,95 @@
 [data-theme="dark"] .contact-info {
     background: rgba(96, 165, 250, 0.05);
 }
+
+/* Expertise Section */
+[data-theme="dark"] .expertise-category {
+    background-color: var(--background-light);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+[data-theme="dark"] .expertise-category:hover {
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.5);
+}
+
+[data-theme="dark"] .expertise-title {
+    color: var(--primary);
+}
+
+[data-theme="dark"] .skill-name {
+    color: var(--text-dark);
+}
+
+[data-theme="dark"] .skill-bar {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+[data-theme="dark"] .skill-level {
+    color: var(--text-dark);
+}
+
+[data-theme="dark"] .framework-card {
+    background-color: rgba(30, 41, 59, 0.8);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+[data-theme="dark"] .framework-card:hover {
+    background-color: rgba(30, 41, 59, 0.9);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
+}
+
+[data-theme="dark"] .framework-header h4 {
+    color: var(--primary);
+}
+
+[data-theme="dark"] .framework-features li {
+    color: var(--text-dark);
+}
+
+[data-theme="dark"] .achievement-badge {
+    background-color: var(--background-light);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+[data-theme="dark"] .achievement-badge:hover {
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
+}
+
+[data-theme="dark"] .badge-content {
+    color: var(--text-dark);
+}
+
+[data-theme="dark"] .badge-number {
+    color: var(--primary);
+}
+
+[data-theme="dark"] .badge-text {
+    color: var(--text-dark);
+}
+
+[data-theme="dark"] .tool-item {
+    color: var(--text-dark);
+}
+
+[data-theme="dark"] .tool-item:hover {
+    color: var(--primary);
+}
+
+/* Languages sections */
+[data-theme="dark"] .languages-section {
+    background: rgba(30, 41, 59, 0.6);
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+[data-theme="dark"] .languages-section:hover {
+    background: rgba(30, 41, 59, 0.8);
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+[data-theme="dark"] .languages-subtitle {
+    color: var(--primary);
+}
+
+[data-theme="dark"] .languages-subtitle i {
+    color: var(--primary-hover);
+}

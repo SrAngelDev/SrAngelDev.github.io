@@ -1,4 +1,100 @@
-/* Grid */
+/* Layout principal */
+.expertise-layout {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+/* Fila superior: 4 columnas */
+.expertise-grid-top {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+/* Fila inferior: ancho completo */
+.expertise-grid-bottom {
+    display: flex;
+    justify-content: center;
+}
+
+.expertise-category--full {
+    width: 100%;
+}
+
+/* Skill matrix en grid para lenguajes */
+.skill-matrix--grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+}
+
+/* Layout para lenguajes (Frontend/Backend) */
+.languages-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+
+.languages-section {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: var(--radius);
+    padding: 25px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: var(--transition);
+}
+
+.languages-section:hover {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+}
+
+.languages-subtitle {
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    color: var(--primary);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.languages-subtitle i {
+    margin-right: 10px;
+    font-size: 1.2rem;
+    color: var(--primary-hover);
+}
+
+/* Responsive para languages layout */
+@media (max-width: 768px) {
+    .languages-layout {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+}
+
+/* Responsive para fila superior */
+@media (max-width: 1024px) {
+    .expertise-grid-top {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+    }
+}
+
+@media (max-width: 768px) {
+    .expertise-grid-top {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    .skill-matrix--grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Grid original (mantener como fallback) */
 .expertise-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
