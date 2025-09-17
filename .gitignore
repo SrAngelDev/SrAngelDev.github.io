@@ -1,0 +1,20 @@
+# Archivos de deployment y scripts locales
+upload.sh
+
+# Archivos temporales
+*.tmp
+*.temp
+
+# Archivos de sistema
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Dependencias de Node.js (si las usas en el futuro)
+node_modules/
+
+# Archivos de configuración local
+.env
+.env.local
